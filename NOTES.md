@@ -1,0 +1,3 @@
+Prompt 1: Asked Claude Code to create estate module base structure with manifest and init files. It created manifest.py with correct Odoo 16 format and empty init.py. Accepted output as correct.
+
+Prompt 2: Asked Claude Code to create estate.property model with all tutorial fields. It created models/estate_property.py with all required fields including correct types — Char, Text, Date, Float, Integer, Boolean, Selection. Output looked correct, accepted as is.
