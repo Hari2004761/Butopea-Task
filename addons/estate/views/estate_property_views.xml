@@ -6,7 +6,7 @@
         <field name="name">estate.property.list</field>
         <field name="model">estate.property</field>
         <field name="arch" type="xml">
-            <list string="Properties"
+            <tree string="Properties"
                   decoration-success="state == 'offer_accepted'"
                   decoration-muted="state == 'sold'">
                 <field name="name"/>
@@ -19,7 +19,7 @@
                 <field name="selling_price"/>
                 <field name="date_availability" optional="hide"/>
                 <field name="state" optional="hide"/>
-            </list>
+            </tree>
         </field>
     </record>
 
@@ -82,7 +82,7 @@
                         <page string="Offers">
                             <field name="offer_ids"
                                    attrs="{'readonly': [('state', 'in', ['offer_accepted', 'sold', 'canceled'])]}">
-                                <list decoration-success="status == 'accepted'"
+                                <tree decoration-success="status == 'accepted'"
                                       decoration-danger="status == 'refused'">
                                     <field name="partner_id"/>
                                     <field name="price"/>
@@ -95,7 +95,7 @@
                                     <button name="action_refuse" string="Refuse" type="object"
                                             icon="fa-times"
                                             attrs="{'invisible': [('status', '!=', False)]}"/>
-                                </list>
+                                </tree>
                             </field>
                         </page>
                     </notebook>

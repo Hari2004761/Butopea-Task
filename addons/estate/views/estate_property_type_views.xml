@@ -6,11 +6,11 @@
         <field name="name">estate.property.type.list</field>
         <field name="model">estate.property.type</field>
         <field name="arch" type="xml">
-            <list string="Property Types">
+            <tree string="Property Types">
                 <field name="sequence" widget="handle"/>
                 <field name="name"/>
                 <field name="offer_count" string="Offers"/>
-            </list>
+            </tree>
         </field>
     </record>
 
@@ -31,11 +31,11 @@
                         <h1><field name="name" placeholder="Type Name"/></h1>
                     </div>
                     <field name="property_ids">
-                        <list>
+                        <tree>
                             <field name="name"/>
                             <field name="expected_price"/>
                             <field name="state"/>
-                        </list>
+                        </tree>
                     </field>
                 </sheet>
             </form>
