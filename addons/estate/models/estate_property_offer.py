@@ -50,6 +50,7 @@ class EstatePropertyOffer(models.Model):
             # Refuse all sibling offers first
             (offer.property_id.offer_ids - offer).write({'status': 'refused'})
             offer.property_id.selling_price = offer.price
+            offer.property_id.buyer_id = offer.partner_id
             offer.property_id.state = 'offer_accepted'
             offer.status = 'accepted'
         return True
@@ -58,6 +59,7 @@ class EstatePropertyOffer(models.Model):
         for offer in self:
             if offer.status == 'accepted':
                 offer.property_id.selling_price = 0.0
+                offer.property_id.buyer_id = False
                 offer.property_id.state = 'offer_received'
             offer.status = 'refused'
         return True
