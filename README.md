@@ -1,4 +1,4 @@
-# Butopêa Practical Test - Odoo 16 Backend Developer
+# Butopêa Practical Test 
 
 This repository is the submission for the Butopêa practical test for an Odoo 16 Backend Developer position. It contains three custom addons built and debugged inside a Docker-based Odoo 16 environment.
 
@@ -62,7 +62,7 @@ A real estate management module built following the official Odoo 16 tutorial. P
 Extends `estate` with accounting integration. Depends on both `estate` and Odoo's `account` module (Invoicing app must be installed). When a property is marked as sold:
 
 - A draft customer invoice is automatically created for the buyer
-- Invoice lines: 6% commission on the selling price + €100 fixed administrative fee
+- Invoice lines: 6% commission on the selling price + 100 fixed administrative fee
 - A smart button on the property form shows the linked invoice count and opens the invoice list
 
 The invoice is linked to the property via a `property_id` field on `account.move`, using a `One2many` relation to avoid cross-contamination with unrelated invoices.
