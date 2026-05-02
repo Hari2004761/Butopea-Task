@@ -85,13 +85,13 @@ With the containers running and a database created, install modules using `docke
 
 ```bash
 # Install the base estate module first
-docker exec odoo16 odoo -c /etc/odoo/odoo.conf -d <your-database> -i estate --no-http --stop-after-init
+docker exec odoo16 odoo --db_host=db --db_user=odoo --db_password=odoo -d <your-database> -i estate --stop-after-init
 
 # Install estate_account (requires Invoicing app already installed via UI)
-docker exec odoo16 odoo -c /etc/odoo/odoo.conf -d <your-database> -i estate_account --no-http --stop-after-init
+docker exec odoo16 odoo --db_host=db --db_user=odoo --db_password=odoo -d <your-database> -i estate_account --stop-after-init
 
 # Install course_catalog
-docker exec odoo16 odoo -c /etc/odoo/odoo.conf -d <your-database> -i course_catalog --no-http --stop-after-init
+docker exec odoo16 odoo --db_host=db --db_user=odoo --db_password=odoo -d <your-database> -i course_catalog --stop-after-init
 ```
 
 Replace `<your-database>` with the name of the database you created (visible in Settings > Manage Databases).
@@ -107,7 +107,7 @@ Alternatively, all modules can be installed through the Odoo UI via **Settings >
 Open an Odoo shell session:
 
 ```bash
-docker exec -it odoo16 odoo shell -c /etc/odoo/odoo.conf -d <your-database>
+docker exec -it odoo16 odoo shell --db_host=db --db_user=odoo --db_password=odoo -d <your-database>
 ```
 
 Then run the following in the shell to verify the invoice created on sale:
