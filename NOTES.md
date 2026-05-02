@@ -7,7 +7,7 @@ All tasks were completed using Claude Code as the primary AI tool, with Odoo 16 
 ## Foundation
 
 **Prompt 1:**
-"I need to build an Odoo 16 custom addon called estate following the official Odoo tutorial. Create the basic module structure inside the addons folder with __manifest__.py and __init__.py files."
+"Create the basic module structure inside the addons folder with __manifest__.py and __init__.py files."
 
 Observation: Created correct base structure with proper manifest format.
 
