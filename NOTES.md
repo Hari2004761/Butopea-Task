@@ -2,7 +2,7 @@
 
 ## Workflow Description
 
-All tasks completed using Claude Code as the primary AI tool, with Odoo 16 documentation and error tracebacks used to verify and correct AI output.
+All tasks were completed using Claude Code as the primary AI tool, with Odoo 16 documentation and error tracebacks used to verify and correct AI output.
 
 ## Foundation
 
