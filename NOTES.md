@@ -22,10 +22,10 @@ Observation: All fields created with correct Odoo 16 field types.
 Observation: Built all 4 models, views, state machine and buttons.
 
 **Bug 1 - Odoo 17 vs 16 syntax (list vs tree):**
-During installation, Odoo threw a ValueError on ir.ui.view.type: 'list'. I read the error traceback, identified it was a view type issue, and checked the Odoo 16 documentation which confirmed that list views use the <tree> tag in v16 - <list> was introduced in v17.
+During installation, Odoo threw a ValueError on ir.ui.view.type: 'list'. I read the error traceback, identified it was a view type issue, and checked the Odoo 16 documentation which confirmed that list views use the `<tree>` tag in v16 - `<list>` was introduced in v17.
 
 **Prompt 4:**
-"There's a bug in estate_property_views.xml - Odoo 16 uses <tree> not <list> for list views. Please find and replace all instances across all view XML files."
+"There's a bug in estate_property_views.xml - Odoo 16 uses `<tree>` not `<list>` for list views. Please find and replace all instances across all view XML files."
 
 Observation: Fixed 6 instances across 3 files and also fixed view_mode="list,form" to view_mode="tree,form" in the action record.
 
